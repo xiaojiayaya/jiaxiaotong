@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap页面</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <style>
+        body {
+            padding-top: 50px;
+        }
+
+        .xj-search-btn:active:focus,
+        .xj-search-btn:focus {
+            outline: none;
+        }
+
+        .xj-search-input:focus {
+            box-shadow: none;
+            border-color: #ccc;
+        }
+
+        .carousel-xj img {
+            width: 100%;
+        }
+
+        .main-content {
+            margin-top: 20px;
+        }
+
+        .courses img {
+            width: 100%;
+        }
+
+        .page-footer {
+            margin-top: 40px;
+            padding: 40px 0;
+            background-color: black;
+            color: #fff;
+        }
+
+        .page-footer a {
+            color: #fff;
+        }
+
+        .page-footer h3 {
+            font-size: 1.2em;
+            font-weight: bolder;
+        }
+
+        .page-footer ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        .footer-copyright {
+            margin-top: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 导航条 -->
+    <nav class="navbar navbar-default navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Brand</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">首页 <span class="sr-only">(current)</span></a></li>
+                    <li><a href="#">教程</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                            aria-expanded="false">课程 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">HTML5</a></li>
+                            <li><a href="#">CSS3</a></li>
+                            <li><a href="#">JavaScript</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">JQuery</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Bootstrap</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="navbar-form navbar-left">
+                    <div class="input-group">
+                        <input type="text" class="form-control xj-search-input" placeholder="Search for...">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default xj-search-btn" type="button">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </span>
+                    </div><!-- /input-group -->
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#" data-toggle="modal" data-target="#loginModal">登录</a></li>
+                    <li><a href="#" data-toggle="modal" data-target="#registerModal">注册</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+
+    <!-- 轮播图 -->
+    <!-- 
+        视口宽度 >= 992px,使用最大的图 play01 play02 play03
+        视口宽度 768px-992px，使用中等图片 play01-sm play02-sm play03-sm
+        视口宽度 768以下 ,使用最小的图 play01-xs play02-xs play03-xs
+     -->
+    <div id="carousel-example-generic" class="carousel slide carousel-xj" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <picture>
+                    <source srcset="./images/play01.jpg" media="(min-width:992px)">
+                    <source srcset="./images/play01-sm.jpg" media="(min-width:768px)">
+                    <img src="./images/play01-xs.jpg" alt="...">
+                </picture>
+                <div class="carousel-caption">
+                    <h2>第一部分</h2>
+                    <p>非等哉韩个了如，联夫之是的自人天是的你程春我洋今有陀，锐慨不木一应承，我沾反如。</p>
+                </div>
+            </div>
+            <div class="item">
+                <picture>
+                    <source srcset="./images/play02.jpg" media="(min-width:992px)">
+                    <source srcset="./images/play02-sm.jpg" media="(min-width:768px)">
+                    <img src="./images/play02-xs.jpg" alt="...">
+                </picture>
+                <div class="carousel-caption">
+                    <h2>第二部分</h2>
+                    <p>血国苟人都亲居的无家子负常尘笔未，了人量那不处贼舟，弟人远。</p>
+                </div>
+            </div>
+            <div class="item">
+                <picture>
+                    <source srcset="./images/play03.jpg" media="(min-width:992px)">
+                    <source srcset="./images/play03-sm.jpg" media="(min-width:768px)">
+                    <img src="./images/play03-xs.jpg" alt="...">
+                </picture>
+                <div class="carousel-caption">
+                    <h2>第三部分</h2>
+                    <p>就人而有支找只见事未法我山先厅太，呼也放回婵上锐呼就妙。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+    <!-- 主要内容 路径导航(面包屑导航) 课程列表 分页 -->
+    <div class="main-content container">
+        <ol class="breadcrumb">
+            <li><a href="#">首页</a></li>
+            <li><a href="#">课程</a></li>
+            <li class="active">推荐课程</li>
+        </ol>
+
+        <div class="courses">
+            <div class="row" id="courseBox"></div>
+            <!-- 
+                栅格系统
+                超小屏幕 768px以下 xs   一行一个，每个占12份
+                小屏幕 768-992 sm       一行两个，每个占6份
+                中等屏幕 992-1200 md    一行三个，每个占4份
+                大屏幕 120以上 lg       一行四个，每个占3份
+             -->
+            <!-- <div class="row">
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="thumbnail">
+                        <img src="./images/css.jpg" alt="...">
+                        <div class="caption">
+                            <h3>CSS</h3>
+                            <p>气就耳轻留，乡皇流。</p>
+                            <p>
+                                <a href="#" class="btn btn-success" role="button">立即购买</a>
+                                <a href="#" class="btn btn-info" role="button">在现试看</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="thumbnail">
+                        <img src="./images/css.jpg" alt="...">
+                        <div class="caption">
+                            <h3>CSS</h3>
+                            <p>气就耳轻留，乡皇流。</p>
+                            <p>
+                                <a href="#" class="btn btn-success" role="button">立即购买</a>
+                                <a href="#" class="btn btn-info" role="button">在现试看</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="thumbnail">
+                        <img src="./images/js.jpg" alt="...">
+                        <div class="caption">
+                            <h3>JS基础</h3>
+                            <p>气就耳轻留，乡皇流。</p>
+                            <p>
+                                <a href="#" class="btn btn-success" role="button">立即购买</a>
+                                <a href="#" class="btn btn-info" role="button">在现试看</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="thumbnail">
+                        <img src="./images/js高级.jpg" alt="...">
+                        <div class="caption">
+                            <h3>JavaScript</h3>
+                            <p>气就耳轻留，乡皇流。</p>
+                            <p>
+                                <a href="#" class="btn btn-success" role="button">立即购买</a>
+                                <a href="#" class="btn btn-info" role="button">在现试看</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="thumbnail">
+                        <img src="./images/jQuery.jpg" alt="...">
+                        <div class="caption">
+                            <h3>jQuery</h3>
+                            <p>气就耳轻留，乡皇流。</p>
+                            <p>
+                                <a href="#" class="btn btn-success" role="button">立即购买</a>
+                                <a href="#" class="btn btn-info" role="button">在现试看</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="thumbnail">
+                        <img src="./images/Ajax.jpg" alt="...">
+                        <div class="caption">
+                            <h3>Ajax</h3>
+                            <p>气就耳轻留，乡皇流。</p>
+                            <p>
+                                <a href="#" class="btn btn-success" role="button">立即购买</a>
+                                <a href="#" class="btn btn-info" role="button">在现试看</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="thumbnail">
+                        <img src="./images/Less.jpg" alt="...">
+                        <div class="caption">
+                            <h3>Less</h3>
+                            <p>一但自到不你处找你贼前，价皇。</p>
+                            <p>
+                                <a href="#" class="btn btn-success" role="button">立即购买</a>
+                                <a href="#" class="btn btn-info" role="button">在现试看</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div class="thumbnail">
+                        <img src="./images/BootStrap.jpg" alt="...">
+                        <div class="caption">
+                            <h3>BootStrap</h3>
+                            <p>都对秦不我将正对李说准一圣要。</p>
+                            <p>
+                                <a href="#" class="btn btn-success" role="button">立即购买</a>
+                                <a href="#" class="btn btn-info" role="button">在现试看</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- 分页 -->
+            <nav aria-label="Page navigation">
+                <ul class="pagination" id="pageBox">
+                    <!-- <li>
+                        <a href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li>
+                        <a href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li> -->
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="page-footer">
+        <div class="container">
+            <div class="footer-nav">
+                <!-- 
+                    超小屏幕 一行一个
+                    小屏幕 一行两个
+                    中等屏幕、大屏幕 一行四个
+                 -->
+                <div class="row">
+                    <div class="col-sm-6 col-md-3">
+                        <h3>用户</h3>
+                        <ul>
+                            <li><a href="#">个人账户资料</a></li>
+                            <li><a href="#">下载中心</a></li>
+                            <li><a href="#">订单跟踪</a></li>
+                            <li><a href="#">用户评价</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <h3>教育</h3>
+                        <ul>
+                            <li><a href="#">个人账户资料</a></li>
+                            <li><a href="#">下载中心</a></li>
+                            <li><a href="#">订单跟踪</a></li>
+                            <li><a href="#">用户评价</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <h3>公司</h3>
+                        <ul>
+                            <li><a href="#">个人账户资料</a></li>
+                            <li><a href="#">下载中心</a></li>
+                            <li><a href="#">订单跟踪</a></li>
+                            <li><a href="#">用户评价</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <h3>开发人员</h3>
+                        <ul>
+                            <li><a href="#">个人账户资料</a></li>
+                            <li><a href="#">下载中心</a></li>
+                            <li><a href="#">订单跟踪</a></li>
+                            <li><a href="#">用户评价</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            <div class="footer-copyright">
+                &copy; 2023-2024 河北传媒版权所有
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- 模态框 -->
+
+    <div class="modal fade" tabindex="-1" role="dialog" id="loginModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">登录</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">邮箱</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">密码</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1"
+                                placeholder="Password">
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> 记住密码
+                            </label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary">登录</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 模态框 -->
+    <div class="modal fade" tabindex="-1" role="dialog" id="registerModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">注册</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">邮箱</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">密码</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1"
+                                placeholder="Password">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">确认密码</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1"
+                                placeholder="Password">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary">注册</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/axios.min.js"></script>
+
+    <script>
+        (function () {
+
+            //调用函数，获取第一页的数据
+            getCourse();
+
+            //给页码按钮监听单击事件
+            $('#pageBox').on('click','a',function(event){
+                //阻止浏览器默认行为
+                event.preventDefault();
+
+                //获取课程列表数据，指定页码
+                getCourse(this.dataset.page);
+
+            })
+
+
+            //函数，获取课程信息,参数1指定第几页，默认值是1，参数2指定每页多少条数据，默认值是8
+            function getCourse(no=1,size=8) {
+                //使用axios向后端发送请求，获取课程列表信息
+                axios.get('http://api.fuming.site:54254/course', {
+                    params: {
+                        pageNo: no,
+                        pageSize: size
+                    }
+                }).then(function (res) {
+                    console.log(res.data);
+                    let htmlData = '';
+                    res.data.data.forEach(function (item) {
+                        htmlData += `<div class="col-sm-6 col-md-4 col-lg-3">
+                            <div class="thumbnail">
+                                <img src="${item.img}" alt="...">
+                                    <div class="caption">
+                                        <h5>${item.title}</h5>
+                                        <p>
+                                            <a href="#" class="btn btn-success" role="button">立即购买</a>
+                                            <a href="${item.href}" target="_blank" class="btn btn-info" role="button">在现试看</a>
+                                        </p>
+                                    </div>
+                            </div>
+                        </div>
+                        `
+                    });
+
+                    $('#courseBox').html(htmlData);
+
+                    //渲染分页信息
+                    let pageData = `
+                    <li>
+                        <a href="#" aria-lable="Previous" data-page="${res.data.pageNo-1}">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>`;
+                    for (let i = 1; i <= res.data.pageSum; i++) {
+                        pageData += `
+                        <li class="${res.data.pageNo === i ? 'active' : ''}">
+                            <a href="#" data-page="${i}">${i}</a>
+                        </li>`;
+                    }
+                    pageData += `
+                    <li>
+                        <a href="#" aria-lable="Next" data-page="${res.data.pageNo+1}">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>`;
+                    $('#pageBox').html(pageData);
+                })
+            }
+
+
+        })();
+    </script>
+
+
+</body>
+
+</html>
